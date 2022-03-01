@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "esbuild main.js --outdir=public/js --servedir=public --bundle"
+    "dev": "node dev.js"
   },
   "dependencies": {
     "@quarkworks-inc/avatar-webkit": "^2022.2.36",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "dotenv": "^16.0.0",
     "esbuild": "^0.14.23"
   }
 }
