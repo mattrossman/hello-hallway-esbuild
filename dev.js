@@ -1,6 +1,4 @@
 require("dotenv").config()
-const { NodeGlobalsPolyfillPlugin } = require("@esbuild-plugins/node-globals-polyfill")
-const { NodeModulesPolyfillPlugin } = require("@esbuild-plugins/node-modules-polyfill")
 const esbuild = require("esbuild")
 
 /** @type {esbuild.ServeOptions} */
@@ -17,12 +15,6 @@ const buildOptions = {
   define: {
     AVATAR_WEBKIT_AUTH_TOKEN: `\"${process.env.AVATAR_WEBKIT_AUTH_TOKEN}\"`,
   },
-  plugins: [
-    NodeGlobalsPolyfillPlugin({
-      process: true,
-    }),
-    NodeModulesPolyfillPlugin(),
-  ],
 }
 
 esbuild
