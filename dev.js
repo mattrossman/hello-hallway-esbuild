@@ -11,6 +11,7 @@ const serveOptions = {
 const buildOptions = {
   entryPoints: ["main.js"],
   bundle: true,
+  format: "esm",
   outdir: "public/js",
   define: {
     AVATAR_WEBKIT_AUTH_TOKEN: `\"${process.env.AVATAR_WEBKIT_AUTH_TOKEN}\"`,
